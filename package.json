@@ -1,0 +1,23 @@
+{
+  "name": "k-serenityskincare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch scss/main.scss:css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeyzaCevikPXL/K-SerenitySkincare.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeyzaCevikPXL/K-SerenitySkincare/issues"
+  },
+  "homepage": "https://github.com/BeyzaCevikPXL/K-SerenitySkincare#readme",
+  "dependencies": {
+    "sass": "^1.68.0"
+  }
+}

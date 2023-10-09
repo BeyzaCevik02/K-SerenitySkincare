@@ -1,0 +1,89 @@
+$primary-color: #e4d6d6;
+$secondary-color: #a24e4e;
+$tertiary-color: #fff7f7;
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Mulish:wght@200;400&display=swap');
+$font-bodoni: 'Bodoni Moda', serif;
+$font-mulish: 'Mulish', sans-serif;
+
+$font-xl-size: 100px;
+$font-lg-size: 40px;
+$font-md-size: 30px;
+$font-sm-size: 20px;
+$font-btn-size: 20px;
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin navbar-link-colors($normal-color, $hover-color) {
+
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 25px 50px 25px;
+  z-index: 999; 
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline;
+      margin: 50px;
+    }
+  }
+  a{
+    text-decoration: none;
+    font-family: $font-mulish;
+    font-size: $font-sm-size;
+    font-weight: lighter;
+    color: $normal-color;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+.logo {
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  img {
+      width: 200px;
+      height: auto;
+  }
+}
+#navbarjs.scrolled{
+  background-color: $secondary-color;
+  transition: background-color 0.5s ease;
+  //werkt niet
+  &:hover{
+    color: #fff7f7;
+  }
+}
+@mixin flex-center($justify: center) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+//text over image
+@mixin imagetext(){
+    position: relative;
+    text-align: center;
+}
+//text over image positie geven
+@mixin position-absolute($top: null, $bottom: null) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    @if $top {
+      top: $top;
+    }
+    @else if $bottom {
+      bottom: $bottom;
+    }
+  }
+  

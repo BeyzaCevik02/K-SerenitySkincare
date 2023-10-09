@@ -1,0 +1,152 @@
+@use 'base' as *;
+
+.background {
+    background-image: url('/assets/aiony-haust-f2ar0ltTvaI-unsplash.png');
+    background-size: cover;
+    background-position: center center;
+    flex-direction: column;
+    @include flex-center;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+
+
+    .content {
+        text-align: center;
+    }
+    h1, p, button {
+        margin: 10px 0;
+        width: 100%;
+        color: $tertiary-color;
+    }
+    h1{
+        font-size: $font-xl-size;
+        font-family: $font-bodoni;
+    }
+    p{
+        font-size: $font-md-size;
+        font-family: $font-mulish;
+    } 
+    button {
+        font-size: $font-btn-size;
+        font-family: $font-mulish;
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 1px solid $tertiary-color;
+        cursor: pointer;
+        width: auto;
+        &:hover{
+            background-color: $tertiary-color;
+            color: $secondary-color;
+        }
+    }
+}
+.navbar{
+     @include navbar-link-colors($tertiary-color, $secondary-color);
+}
+  
+//info
+.info {
+    @include flex-center(space-between);
+    flex-direction: row;
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 20px;
+    max-width: 100%; 
+    .title {
+      font-size: $font-md-size;
+      font-family: $font-bodoni;
+      text-align: center;
+      margin: 50px;
+    }
+    .uitleg {
+      font-size: $font-sm-size;
+      font-family: $font-mulish;
+      text-align: center;
+      margin: 150px;
+      line-height: 2;
+    }
+}
+//producten
+.producten {
+    background-color: $tertiary-color;
+    padding-bottom: 50px;
+    text-align: center;
+    h2 {
+        font-size: $font-md-size;
+        color: $secondary-color;
+        font-family: $font-bodoni;
+        padding: 20px;
+    }
+    .product {
+        display: inline-block; 
+        width: 30%; 
+        background-size: cover;
+        @include imagetext;
+        padding: 10px;
+        h2, p {
+            font-size: $font-sm-size;
+            color: $tertiary-color;
+        }
+        h2{
+            @include position-absolute(200px);
+            font-family: $font-bodoni;
+        }
+        p{
+            @include position-absolute(null, 190px);
+            font-family: $font-mulish;
+            font-weight: lighter;
+        }
+        img {
+            width: 85%;
+            height: auto; 
+          }
+    }
+}
+//contact
+
+.contact{
+    background-color: $secondary-color;
+    color: $tertiary-color;
+    @include flex-center(space-between);
+    flex-direction: row;
+    padding: 100px;
+    max-width: 100%; 
+    margin: auto;
+    .title {
+        @include imagetext;
+        h2{
+            @include position-absolute(175px);
+            font-size: $font-md-size;
+            font-family: $font-bodoni;
+        }
+        img{
+            width: 75%;
+            height: auto;
+        }
+    }
+    .gegevens {
+        font-size: $font-sm-size;
+        text-align: center;
+        margin-right: 300px;
+        line-height: 1.5;
+        font-family: $font-mulish;
+        font-weight: lighter;
+        //gaat niet weg
+        a {
+            i{
+            text-decoration: none;
+            }
+        }
+    }
+    
+}
+footer{
+    background-color: $primary-color;
+    font-family: $font-bodoni;
+    color: $secondary-color;
+    @include flex-center;
+}
+ 
+  
+  

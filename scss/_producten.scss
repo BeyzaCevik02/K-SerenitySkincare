@@ -1,0 +1,70 @@
+@use 'base' as *;
+
+.navbarpro{
+    @include navbar-link-colors($secondary-color, #422323);
+}
+
+.producten-titel{
+    text-align: center;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    h1{
+        font-family: $font-bodoni;
+    }
+    p{
+        font-family: $font-mulish;
+    }
+}
+.filter {
+    @include flex-center;
+    padding: 20px;
+    font-family: $font-mulish;
+    .prijs-filter{
+        margin-left: 10px;
+    }
+}
+  
+.product-grid {
+    @include flex-center(space-between);
+    flex-wrap: wrap;
+    padding: 0 20px;
+    .product-row {
+        @include flex-center(space-between);
+        width: 100%;
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: calc(30% - 20px);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            h2 {
+              font-size: 1.2em;
+              margin-bottom: 10px;
+              font-family: $font-bodoni;
+            }
+            img {
+              max-width: 100%;
+              height: auto;
+              display: block;
+              margin-bottom: 10px;
+            }
+            p {
+              font-family: $font-mulish;
+              margin: 0;
+            }
+          }
+      }
+}
+  .pagination {
+    text-align: center;
+    font-family: $font-mulish;
+    a {
+      margin: 0 5px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
