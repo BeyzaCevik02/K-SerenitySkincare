@@ -4,18 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | K-Serenity Skincare</title>
+    <link rel="stylesheet" href="/css/main.css">
+
   </head>
   <body>
-    <section>
-        <h1>Login</h1>
-        <form>
-            <label for="email">E-mailadres:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Wachtwoord:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
+    <div class="navbarpro" id="navbarjs">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="producten.html">Producten</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <div class="logo">
+      <img src="/assets/SVG/SVG/Logo-zwart.svg" alt="logo">
+    </div>
+    <div class="centered-container">
+      <div class="login-container">
+        <h2>Login</h2>
+        <form action="#" method="post">
+          <label for="email">E-mailadres:</label>
+          <input type="email" id="email" name="email" required><br>
+
+          <label for="password">Wachtwoord:</label>
+          <input type="password" id="password" name="password" required><br>
+
+          <button type="submit">Inloggen</button>
         </form>
-        <a href="#">Wachtwoord vergeten?</a>
-  </section>
+
+        <p><a href="#" onclick="openModal()">Wachtwoord vergeten?</a></p>
+      </div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Wachtwoord vergeten</h2>
+        <p>Vul het e-mailadres in waarmee u uw account heeft aangemaakt. We sturen u zodadelijk een e-mail met een link om een nieuw wachtwoord in te stellen.</p>
+        <label for="reset-email">E-mailadres:</label>
+        <input type="email" id="reset-email" name="reset-email" required><br>
+        <button class="linkbtn" onclick="sendResetEmail()">Verstuur resetlink</button>
+      </div>
+    </div>
+    <script src="/script.js"></script>
   </body>
 </html>

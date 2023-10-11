@@ -1,0 +1,102 @@
+@use 'base' as *;
+
+.product-content {
+    margin: 150px 0 0 150px;
+  }
+  
+  .product-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+  }
+.image-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px 50px 0;
+    overflow: hidden;
+    width: 500px;
+    .image {
+      width: 500px;
+      height: 550px;
+      display: none;
+      margin-bottom: 10px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .image.active {
+        display: block;
+      }
+    .carousel-arrows {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        span{
+            margin: 0 50px 0;
+        }
+    }
+    span {
+        cursor: pointer;
+        font-size: $font-lg-size;
+      }
+  }
+
+  .product-details {  
+    max-width: 40%;
+    .brand,
+    .product-name,
+    .review,
+    .availability,
+    .description,
+    .price,
+    .quantity{
+      margin-bottom: 20px;
+      font-family: $font-mulish;
+    }
+    .brand,
+    .product-name,.price{
+        font-weight: bold;
+    }
+    .brand{
+        font-size: $font-lg-size;
+    }
+    .product-name{
+        font-size: $font-md-size;
+    }
+    .availability{
+        border-bottom: 1px solid #dadada;
+        padding-bottom: 20px;
+    }
+    .price{
+        font-size: $font-sm-size;
+        color: $secondary-color;
+    }
+    .quantity button{
+        background-color: $primary-color;
+        border: none;
+        cursor: pointer;
+    }
+    .quantity{
+        button, span{
+            padding: 10px;
+        }
+
+    }
+    .add-to-cart{
+      background-color: #000;
+      color: $tertiary-color;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      width: 100%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+  

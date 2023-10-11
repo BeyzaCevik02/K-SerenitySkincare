@@ -28,8 +28,6 @@
         font-family: $font-mulish;
     } 
     button {
-        font-size: $font-btn-size;
-        font-family: $font-mulish;
         padding: 10px 20px;
         background-color: transparent;
         border: 1px solid $tertiary-color;
@@ -141,12 +139,7 @@
     }
     
 }
-footer{
-    background-color: $primary-color;
-    font-family: $font-bodoni;
-    color: $secondary-color;
-    @include flex-center;
-}
+
  
   
   

@@ -1,12 +1,8 @@
 @use 'base' as *;
 
-.navbarpro{
-    @include navbar-link-colors($secondary-color, #422323);
-}
-
 .producten-titel{
     text-align: center;
-    margin-top: 150px;
+    margin-top: 130px;
     padding: 20px;
     background-color: $primary-color;
     color: $secondary-color;
@@ -27,32 +23,41 @@
 }
   
 .product-grid {
-    @include flex-center(space-between);
+    padding: 0 50px;
+    @include flex-center;
     flex-wrap: wrap;
-    padding: 0 20px;
+    margin: 0 auto;
     .product-row {
         @include flex-center(space-between);
-        width: 100%;
+        width: 80%;
         .product-card {
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: calc(30% - 20px);
+            width: 30%;
             box-sizing: border-box;
-            margin-bottom: 20px;
+            margin: 20px 0;;
+            text-align: center;
             h2 {
-              font-size: 1.2em;
+              font-size: $font-sm-size;
               margin-bottom: 10px;
               font-family: $font-bodoni;
             }
             img {
-              max-width: 100%;
+              max-width: 70%;
               height: auto;
               display: block;
               margin-bottom: 10px;
+              margin: 0 auto;
+
             }
             p {
               font-family: $font-mulish;
               margin: 0;
+            }
+            .prijskleur{
+              color: $secondary-color;
+            }
+            a{
+              color: #000;
+              display: block;
             }
           }
       }
@@ -60,11 +65,24 @@
   .pagination {
     text-align: center;
     font-family: $font-mulish;
+    margin: 20px 0;
     a {
       margin: 0 5px;
-      text-decoration: none;
+      color: #000;
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .product-card {
+      width: calc(45%); /* Aanpassen van de breedte voor kleinere schermen */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .product-card {
+      width: calc(100%); /* Aanpassen van de breedte voor nog kleinere schermen */
     }
   }

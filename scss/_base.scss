@@ -23,7 +23,7 @@ body{
   position: fixed;
   top: 0;
   right: 0;
-  padding: 25px 50px 25px;
+  padding: 40px 50px 25px;
   z-index: 999; 
   ul {
     list-style-type: none;
@@ -64,6 +64,9 @@ body{
     color: #fff7f7;
   }
 }
+.navbarpro{
+  @include navbar-link-colors($secondary-color, #422323);
+}
 @mixin flex-center($justify: center) {
     display: flex;
     align-items: center;
@@ -87,3 +90,19 @@ body{
     }
   }
   
+//btn
+button{
+  font-family: $font-mulish;
+  font-size: $font-btn-size;
+}
+a{
+  text-decoration: none;
+}
+
+//footer
+footer{
+  background-color: $primary-color;
+  font-family: $font-bodoni;
+  color: $secondary-color;
+  @include flex-center;
+}
