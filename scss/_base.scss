@@ -46,6 +46,9 @@ body{
       color: $hover-color;
     }
   }
+  .active{
+    font-weight: bolder;
+  }
 }
 .logo {
   position: absolute;
@@ -56,14 +59,13 @@ body{
       height: auto;
   }
 }
-#navbarjs.scrolled{
+/*#navbarjs.scrolled{
   background-color: $secondary-color;
   transition: background-color 0.5s ease;
-  //werkt niet
   &:hover{
     color: #fff7f7;
   }
-}
+}*/
 .navbarpro{
   @include navbar-link-colors($secondary-color, #422323);
 }
@@ -91,9 +93,21 @@ body{
   }
   
 //btn
-button{
+@mixin button-border($border: true) {
   font-family: $font-mulish;
   font-size: $font-btn-size;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  @if $border {
+    border: 1px solid $tertiary-color;
+  } @else {
+    border: none;
+  }
+}
+
+.background-producten{
+  background-color: $tertiary-color;
 }
 a{
   text-decoration: none;

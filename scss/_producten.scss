@@ -21,7 +21,6 @@
         margin-left: 10px;
     }
 }
-  
 .product-grid {
     padding: 0 50px;
     @include flex-center;
@@ -33,7 +32,7 @@
         .product-card {
             width: 30%;
             box-sizing: border-box;
-            margin: 20px 0;;
+            margin: 20px 0;
             text-align: center;
             h2 {
               font-size: $font-sm-size;
@@ -72,17 +71,5 @@
       &:hover {
         text-decoration: underline;
       }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .product-card {
-      width: calc(45%); /* Aanpassen van de breedte voor kleinere schermen */
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .product-card {
-      width: calc(100%); /* Aanpassen van de breedte voor nog kleinere schermen */
     }
   }

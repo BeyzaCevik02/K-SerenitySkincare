@@ -1,20 +1,16 @@
 @use 'base' as *;
 
 .product-content {
-    margin: 150px 0 0 150px;
+    margin: 125px 0 0 150px;
+  }
+  .product-page {
+    @include flex-center;
   }
   
-  .product-page {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-  }
 .image-carousel {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
-    margin: 0 30px 50px 0;
+    margin: 50px 75px 50px 0;
     overflow: hidden;
     width: 500px;
     .image {
@@ -31,11 +27,11 @@
         display: block;
       }
     .carousel-arrows {
-        display: flex;
-        justify-content: space-between;
+        @include flex-center;
         width: 100%;
         span{
             margin: 0 50px 0;
+            color: $tertiary-color;
         }
     }
     span {
@@ -74,26 +70,23 @@
         font-size: $font-sm-size;
         color: $secondary-color;
     }
-    .quantity button{
-        background-color: $primary-color;
-        border: none;
-        cursor: pointer;
-    }
     .quantity{
-        button, span{
-            padding: 10px;
-        }
+      button{
+        background-color: $primary-color;
+        @include button-border(false);
+      }
+      span{
+        padding: 10px;
+      }
 
     }
+
     .add-to-cart{
       background-color: #000;
       color: $tertiary-color;
-      border: none;
-      padding: 10px 20px;
+      @include button-border(false);
       margin-top: 20px;
       width: 100%;
-      cursor: pointer;
-
       &:hover {
         background-color: $secondary-color;
       }

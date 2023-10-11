@@ -14,7 +14,7 @@
 
     h2 {
         font-family: $font-bodoni;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
   
     form {
@@ -32,12 +32,9 @@
       }
   
       button {
-        padding: 10px 20px;
         background-color: $secondary-color;
         color: white;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s;
+        @include button-border(false);
         &:hover {
           background-color: darken($secondary-color, 10%);
         }
@@ -47,10 +44,8 @@
     p {
       text-align: center;
       font-family: $font-mulish;
-
       a {
         color: $secondary-color;
-  
         &:hover {
           color: darken($secondary-color, 10%);
         }
@@ -89,21 +84,18 @@
             margin-top: 20px;
             padding: 10px 20px;
             background-color: $primary-color;
-            border: 1px solid $tertiary-color;
-            cursor: pointer;
+            @include button-border(true);
             &:hover{
                 background-color: $secondary-color;
                 color: $tertiary-color;
             }
         }
         .close {
-          color: #aaa;
+          color: $primary-color;
           float: right;
           font-size: $font-md-size;
           font-weight: bold;
-      
-          &:hover,
-          &:focus {
+          &:hover {
             color: black;
             text-decoration: none;
             cursor: pointer;
