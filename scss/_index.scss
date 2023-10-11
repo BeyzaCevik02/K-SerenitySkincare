@@ -3,14 +3,11 @@
 .background {
     background-image: url('/assets/aiony-haust-f2ar0ltTvaI-unsplash.png');
     background-size: cover;
-    background-position: center center;
     flex-direction: column;
     @include flex-center;
     height: 100vh;
     padding: 20px;
     position: relative;
-
-
     .content {
         text-align: center;
     }
@@ -28,10 +25,8 @@
         font-family: $font-mulish;
     } 
     button {
-        padding: 10px 20px;
+        @include button-border(true);
         background-color: transparent;
-        border: 1px solid $tertiary-color;
-        cursor: pointer;
         width: auto;
         &:hover{
             background-color: $tertiary-color;
@@ -75,6 +70,7 @@
         color: $secondary-color;
         font-family: $font-bodoni;
         padding: 20px;
+        margin: 0;
     }
     .product {
         display: inline-block; 
@@ -130,11 +126,8 @@
         line-height: 1.5;
         font-family: $font-mulish;
         font-weight: lighter;
-        //gaat niet weg
         a {
-            i{
-            text-decoration: none;
-            }
+            color: $primary-color;
         }
     }
     
