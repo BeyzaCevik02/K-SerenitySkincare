@@ -27,12 +27,16 @@
     flex-wrap: wrap;
     margin: 0 auto;
     .product-row {
-        @include flex-center(space-between);
-        width: 80%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        @include flex-center; 
+        flex-wrap: wrap; 
+        margin-bottom: 20px;
         .product-card {
             width: 30%;
             box-sizing: border-box;
-            margin: 20px 0;
+            margin: 10px 0;
             text-align: center;
             h2 {
               font-size: $font-sm-size;
@@ -60,6 +64,16 @@
             }
           }
       }
+      @media (max-width: 670px) {
+        .product-row {
+          .product-card {
+            width: 100%;
+            img{
+              max-width: 50%;
+            }
+          }
+        }
+      }  
 }
   .pagination {
     text-align: center;

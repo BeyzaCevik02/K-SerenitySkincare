@@ -41,7 +41,7 @@
 //info
 .info {
     @include flex-center(space-between);
-    flex-direction: row;
+    flex-direction: column;
     background-color: $primary-color;
     color: $secondary-color;
     padding: 20px;
@@ -50,14 +50,14 @@
       font-size: $font-md-size;
       font-family: $font-bodoni;
       text-align: center;
-      margin: 50px;
+      margin: 0 10% 0;
     }
     .uitleg {
       font-size: $font-sm-size;
       font-family: $font-mulish;
       text-align: center;
-      margin: 150px;
-      line-height: 2;
+      margin: 0 10% 20px;
+      line-height: 1.5;
     }
 }
 //producten
@@ -81,6 +81,7 @@
         h2, p {
             font-size: $font-sm-size;
             color: $tertiary-color;
+            text-align: center;
         }
         h2{
             @include position-absolute(200px);
@@ -94,7 +95,10 @@
         img {
             width: 85%;
             height: auto; 
-          }
+        }
+        @media (max-width: 670px) {
+            width: 50%;
+        }
     }
 }
 //contact
@@ -117,6 +121,8 @@
         img{
             width: 75%;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
     }
     .gegevens {

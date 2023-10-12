@@ -6,11 +6,11 @@ $tertiary-color: #fff7f7;
 $font-bodoni: 'Bodoni Moda', serif;
 $font-mulish: 'Mulish', sans-serif;
 
-$font-xl-size: 100px;
-$font-lg-size: 40px;
-$font-md-size: 30px;
-$font-sm-size: 20px;
-$font-btn-size: 20px;
+$font-xl-size: 6.25em; 
+$font-lg-size: 2.5em; 
+$font-md-size: 1.875em;
+$font-sm-size: 1.25em; 
+$font-btn-size: 1.25em; 
 
 body{
     margin: 0;
@@ -119,4 +119,17 @@ footer{
   font-family: $font-bodoni;
   color: $secondary-color;
   @include flex-center;
+}
+
+//media query
+@media (max-width: 768px) {
+  body {
+    font-size: 0.875em; 
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 0.75em;
+  }
 }
